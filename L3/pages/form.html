@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма</title>
+    <style>
+        form {
+            width: 400px;
+            margin: 20px 0 20px 20px; 
+            text-align: left;
+        }
+        label, input, select, textarea {
+            display: block;
+            margin: 10px 0;
+        }
+        fieldset {
+            padding: 10px;
+            text-align: left; 
+        }
+        .gender-options, .checkbox-option {
+            display: flex; 
+            gap: 20px; 
+            align-items: center;
+        }
+        .gender-options label, .gender-options input,
+        .checkbox-option label, .checkbox-option input {
+            display: inline; 
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Форма</h1>
+    <p>Ця сторінка демонструє роботу з формами:</p>
+
+    <form action="#" method="post">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="name">Your name:</label>
+            <input type="text" id="name" name="name" placeholder="Введіть ваше ім'я" required>
+
+            <label for="age">Your age:</label>
+            <input type="number" id="age" name="age" min="1" max="120" placeholder="Введіть ваш вік" required>
+        </fieldset>
+
+        <label for="password">Your password:</label>
+        <input type="password" id="password" name="password" placeholder="Введіть ваш пароль" required>
+
+        <label>Gender:</label>
+        <div class="gender-options">
+            <div>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Male</label>
+            </div>
+            <div>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+            </div>
+        </div>
+
+        <div class="checkbox-option">
+            <input type="checkbox" id="remember" name="remember">
+            <label for="remember">Remember me</label>
+        </div>
+
+        <label for="city">Select your city:</label>
+        <select id="city" name="city" required>
+            <option value="">Оберіть місто</option>
+            <option value="kyiv">Київ</option>
+            <option value="lviv">Львів</option>
+            <option value="odesa">Одеса</option>
+            <option value="kharkiv">Харків</option>
+            <option value="dnipro">Дніпро</option>
+        </select>
+
+        <label for="message">Enter your message:</label>
+        <textarea id="message" name="message" rows="5" cols="50" placeholder="Введіть ваше повідомлення"></textarea>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <p><a href="index.html">Повернутися на головну</a></p>
+</body>
+</html>
